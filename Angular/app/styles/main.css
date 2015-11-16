@@ -22,9 +22,48 @@ body{
 
 .banner-content {
   font-size: 32px;
+  width: 50%;
+  float: left;
   color: #F1FAEE;
   padding: 10px;
   font-family: 'Titillium Web', sans-serif;
+}
+
+.loginsection {
+	padding-top: 20px;
+	padding-right: 20px;
+	float: right;
+}
+
+.loginsection input {
+	height: 30px;
+	padding-left: 3px;
+	border-color: #B11111;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+.loginsection input:focus{
+	border-color: #B11111;
+	outline: none;
+	box-shadow: 0 0 .5em #FC3333;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+.loginsection button {
+	background-color: #F3F3F3;
+	border-color: #F3F3F3;
+	border-radius: 5px;
+}
+
+.loginsection button:hover {
+	border-radius: 5px;
+	box-shadow: 0 0 .5em #FC3333;
+}
+
+.loginsection button:focus{
+	outline: none;
 }
 
 .leftcol {

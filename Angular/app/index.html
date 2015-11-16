@@ -31,6 +31,15 @@
     <div class="header">
       <div class="banner">
         <div class="banner-content">Cullen Kirkpatrick - One MEAN Sandbox</div>
+        <div class="loginsection">
+            <input type="text" ng-model="main.username" placeholder="username">
+            <input type="password" ng-model="main.password" placeholder="password">
+
+            <button ng-click="main.register()">Register</button>
+            <button ng-click="main.login()">Login</button>
+            <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
+        </div>
+
       </div>
     </div>
 
@@ -41,10 +50,11 @@
     </div>
 
     <div ng-controller="mainController" class="leftcol">
-        Angular working! Doc Name: <span style="color:red">{{greeting.name}}</span>
+        Angular working! Doc Name: <input type="text" name="userName" ng-model="user.name" required><input id="submit" name="submit" type="submit" value="Submit" onclick="setUser(user)"><span style="color:red">{{user}}</span>
     </div>
 
     <div class="rightcol">
+
     </div>
 
     <div class="bottomrow">
@@ -55,6 +65,13 @@
       </div>
     </div>
 
+
+    <script>
+        function setUser(user) {
+            alert(user);
+            return true;
+        };
+    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
