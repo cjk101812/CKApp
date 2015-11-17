@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('testApp')
+angular.module('testmod')
   .factory('TestService', ['$http', function($http){
 
-	var opsFactory = {};
+	var testFactory = {};
 	var host = 'http://localhost:8080';
 
 
-	opsFactory.getTest = function(successCallback,failureCallback){
+	testFactory.getTest = function(successCallback,failureCallback){
 
 		$http({
 			method:'get',
@@ -15,5 +15,14 @@ angular.module('testApp')
 		}).then(successCallback,failureCallback);
 	};
 
+	testFactory.getUser = function(user,successCallback,failureCallback){
+
+		$http({
+			method:'get',
+			url: host+'/gettests/' + user,
+		}).then(successCallback,failureCallback);
+	};
+
+	return testFactory;
 
 }]);

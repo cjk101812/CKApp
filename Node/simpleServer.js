@@ -28,8 +28,17 @@ app.get('/gettests', function(req, res) {
     });
 });
 
+app.get('/gettests/:user', function(req, res) {
+    // use mongoose to get all todos in the database
+    var query = Test.find({name:req.params.user});
+    console.log(req.params.user + " Logged In");
+    query.exec(function(err, data){
+        res.json(data);
+    });
+});
+
 app.get('/uh', function(req, res) {
-res.send('Hello World');
+    res.send('Hello World');
 });
 
 app.all('/*', function(req, res, next) {

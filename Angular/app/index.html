@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="testmod">
   <head>
     <meta charset="utf-8">
     <title>One MEAN App</title>
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css">
     <!-- endbuild -->
   </head>
-  <body ng-app="testmod">
+  <body ng-controller="mainController">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -35,7 +35,7 @@
             <input type="text" ng-model="main.username" placeholder="username">
             <input type="password" ng-model="main.password" placeholder="password">
 
-            <button ng-click="main.register()">Register</button>
+            <button ng-click="getUser(main.username)">Register</button>
             <button ng-click="main.login()">Login</button>
             <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
         </div>
@@ -49,12 +49,11 @@
     <div ng-view=""></div>
     </div>
 
-    <div ng-controller="mainController" class="leftcol">
-        Angular working! Doc Name: <input type="text" name="userName" ng-model="user.name" required><input id="submit" name="submit" type="submit" value="Submit" onclick="setUser(user)"><span style="color:red">{{user}}</span>
+    <div class="leftcol">
+        {{user}}
     </div>
 
     <div class="rightcol">
-
     </div>
 
     <div class="bottomrow">
@@ -91,6 +90,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/service/TestService.js"></script>
         <!-- endbuild -->
 </body>
 </html>
