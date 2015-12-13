@@ -1,9 +1,10 @@
 body{
   margin: 0;
-  background-color: #DDDDDD;
+  height: 100%;
 }
 
 .construction {
+	z-index: 1000;
 	font-family: 'Permanent Marker', sans-serif;
 	color: #B11111;
 	position: fixed;
@@ -17,14 +18,13 @@ body{
   width: 100%;
   height: 70px;
   top:0px;
-  background-color: #696969;
 }
 
 .banner-content {
   font-size: 32px;
   width: 50%;
   float: left;
-  color: #F1FAEE;
+  color: #595959;
   padding: 10px;
   font-family: 'Titillium Web', sans-serif;
 }
@@ -35,59 +35,88 @@ body{
 	float: right;
 }
 
+.loggedin {
+	font-family: 'Titillium Web', sans-serif;
+	display: none;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: right;
+}
+
 .loginsection input {
 	height: 30px;
 	padding-left: 3px;
-	border-color: #B11111;
+	border-color: #595959;
 	margin-right: 10px;
 	border-radius: 5px;
 }
 
 .loginsection input:focus{
-	border-color: #B11111;
+	border-color: #595959;
 	outline: none;
-	box-shadow: 0 0 .5em #FC3333;
+	box-shadow: 0 0 .5em #595959;
 	margin-right: 10px;
 	border-radius: 5px;
 }
 
-.loginsection button {
+.loginsection button, .loggedin button {
 	background-color: #F3F3F3;
 	border-color: #F3F3F3;
 	border-radius: 5px;
 }
 
-.loginsection button:hover {
+.loginsection button:hover, .loggedin button:hover {
 	border-radius: 5px;
-	box-shadow: 0 0 .5em #FC3333;
+	box-shadow: 0 0 .5em #595959;
 }
 
-.loginsection button:focus{
+.loginsection button:focus, .loggedin button:focus{
 	outline: none;
 }
 
-.leftcol {
-	margin: 1%;
-	width: 48%;
-	height: 650px;
-	float: left;
-	background-color: #FFFFFF;
-}
 
-.rightcol {
-	margin: 1%;
-	width: 48%;
-	height: 650px;
-	background-color: #FFFFFF;
-	display: block;
-	float: right;
-}
-
-.bottomrow {
-	margin-left: 1%;
-	margin-right: 1%;
-	width: 98%;
-	height: 190px;
-	background-color: #FFFFFF;
+.weekly {
+	padding-left: 2px;
+	color: #FFFFFF;
 	display: inline-block;
+	height: 180px;
+	width: 14.1%;
+	background-color: #595959;
+}
+
+.weekly:hover {
+	display: inline-block;
+	height: 180px;
+	width: 14.1%;
+	background-color: #DDDDDD;
+}
+
+.padthebot {
+	margin-bottom: 10px;
+}
+
+.nopadding {
+	padding-right: 0px;
+}
+
+.nutrition, .stats {
+	background-color: #DDDDDD;
+	height: 690px;
+	padding: 0;
+}
+
+.diet {
+	margin: 11px;
+	display: inline-block;
+	width: 96.5%;
+	height: 97%;
+	background-color: #595959;
+}
+
+.stat {
+	margin: 11px;
+	display: inline-block;
+	width: 48%;
+	height: 46.5%;
+	background-color: #595959;
 }

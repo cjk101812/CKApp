@@ -9,7 +9,7 @@ var testSchema = new mongoose.Schema({
 	"name": String,
 	"test": String
 });
-var Test = db.model('Test', testSchema, 'Test');
+var Test = db.model('WorkoutAssistant', testSchema, 'WorkoutAssistant');
 
 
 //DEPLOY APPLICATION
@@ -52,5 +52,5 @@ app.all('/*', function(req, res, next) {
 
 
 // LISTEN ON PORT
-app.listen(8080);
-console.log("App listening on port 8080");
+app.listen(3001);
+console.log("App listening on port 3001");

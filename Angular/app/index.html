@@ -2,7 +2,7 @@
 <html ng-app="testmod">
   <head>
     <meta charset="utf-8">
-    <title>One MEAN App</title>
+    <title>Workout Assistant</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -30,33 +30,60 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="banner">
-        <div class="banner-content">Cullen Kirkpatrick - One MEAN Sandbox</div>
-        <div class="loginsection">
+        <div class="banner-content">Workout Assistant</div>
+        <div class="loginsection" id="loginsection">
             <input type="text" ng-model="main.username" placeholder="username">
             <input type="password" ng-model="main.password" placeholder="password">
 
-            <button ng-click="getUser(main.username)">Register</button>
-            <button ng-click="main.login()">Login</button>
+            <button ng-click="getUser(main.username)">Login</button>
+            <button ng-click="main.login()">Register</button>
             <button ng-click="main.logout()" ng-show="main.isAuthed()">Logout</button>
+        </div>
+        <div class="loggedin" id="loggedin">
+            {{user}}
+            <button ng-click="logout()">Logout</button>
         </div>
 
       </div>
     </div>
 
-    <div class="construction">Under Construction <br> Good Things To Come</div>
+    <div class="construction">Under Construction... <br> Good Things To Come</div>
 
     <div class="container">
     <div ng-view=""></div>
     </div>
 
-    <div class="leftcol">
-        {{user}}
+    <div class="col-md-12 padthebot">
+        <div class="weekly">Sunday</div>
+        <div class="weekly">Monday</div>
+        <div class="weekly">Tuesday</div>
+        <div class="weekly">Wednesday</div>
+        <div class="weekly">Thursday</div>
+        <div class="weekly">Friday</div>
+        <div class="weekly">Saturday</div>
     </div>
 
-    <div class="rightcol">
+    <div class="col-md-4 nopadding">
+        <div class="nutrition">
+            <div class="diet"></div>
+        </div>
     </div>
 
-    <div class="bottomrow">
+    <div class="col-md-8">
+        <div class="stats">
+            <div class="stat">
+                
+            </div>
+            <div class="stat">
+                
+            </div>
+            <div class="stat">
+                
+            </div>
+            <div class="stat">
+                
+            </div>
+        </div>
     </div>
 
     <div class="footer">

@@ -8,7 +8,15 @@ angular.module('testmod', [])
     $scope.getUser = function(user){
         TestService.getUser(user);
         console.log("USER: " + user);
-        $scope.user = "Angular working! Welcome: " + user;
+        $scope.user = "Welcome, " + user + "!";
+        document.getElementById("loginsection").style.display = "none";
+        document.getElementById("loggedin").style.display = "inline";
+    }
+
+    $scope.logout = function(){
+        $scope.user = "";
+        document.getElementById("loginsection").style.display = "inline";
+        document.getElementById("loggedin").style.display = "none";
     }    
 
 }]);
